@@ -17,3 +17,10 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post('/CreateUser','ApiMessageController@CreateUser');
+
+Route::get('/messages', 'ApiController@fetchAllMessages');
+Route::post('/sendMessage','ApiController@sendMessage');
+Route::get('/allMobileUser','ApiController@allMobileUser');
+Route::post('/sendMessageOneToOne', 'ApiController@sendMessageOneToOne');
