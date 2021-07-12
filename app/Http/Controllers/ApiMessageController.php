@@ -2,7 +2,8 @@
 
 	namespace App\Http\Controllers;
 
-	use Illuminate\Http\Request;
+	use App\Message;
+use Illuminate\Http\Request;
 	use App\Chat;
 	use App\User;
 	use App\MobileUser;
@@ -126,7 +127,12 @@
             }
             else
             {
-                return $this->conversation;
+                $tab = array();
+                foreach ($this->conversation as $v)
+                {
+                    $tab[] = array("conversation" => $v, "last_message" => Message::where('conversation_id',$v['id'])->get()->last()->content);
+                }
+                return $tab;
             }
         }
 	}
