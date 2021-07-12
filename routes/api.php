@@ -20,7 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::post('/CreateUser','ApiMessageController@CreateUser');
 
-Route::get('/messages', 'ApiController@fetchAllMessages');
-Route::post('/sendMessage','ApiController@sendMessage');
-Route::get('/allMobileUser','ApiController@allMobileUser');
-Route::post('/sendMessageOneToOne', 'ApiController@sendMessageOneToOne');
+Route::get('/messages', 'ApiMessageController@fetchAllMessages');
+Route::post('/sendMessage','ApiMessageController@sendMessage');
+Route::get('/allMobileUser','ApiMessageController@allMobileUser');
+Route::post('/sendMessageOneToOne', 'ApiMessageController@sendMessageOneToOne');
