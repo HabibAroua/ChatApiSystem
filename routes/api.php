@@ -24,3 +24,4 @@ Route::get('/messages', 'ApiMessageController@fetchAllMessages');
 Route::post('/sendMessage','ApiMessageController@sendMessage');
 Route::get('/allMobileUser','ApiMessageController@allMobileUser');
 Route::post('/sendMessageOneToOne', 'ApiMessageController@sendMessageOneToOne');
+Route::get('/getConversationByUser/{id}', 'ApiMessageController@getConversationByUser');

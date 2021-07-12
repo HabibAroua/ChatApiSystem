@@ -116,5 +116,18 @@
 		{
 			return MobileUser::all();
 		}
+
+		public function getConversationByUser($id)
+        {
+            $this->conversation = Conversation::where('users','like','%\"'.$id.'\"%')->get();
+            if(count($this->conversation) == 0)
+            {
+                return response()->json(["message"=>"There is no any conversation"],404);
+            }
+            else
+            {
+                return $this->conversation;
+            }
+        }
 	}
 ?>
