@@ -3,7 +3,7 @@
 	namespace App\Http\Controllers;
 
 	use App\Message;
-use Illuminate\Http\Request;
+    use Illuminate\Http\Request;
 	use App\Chat;
 	use App\User;
 	use App\MobileUser;
