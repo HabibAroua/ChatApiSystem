@@ -18,7 +18,7 @@
 				'conversations', function (Blueprint $table) 
 				{
 					$table->bigIncrements('id');
-					$table->text('users')->unique();
+					$table->text('users');
 					$table->timestamps();
 				}
 			);
