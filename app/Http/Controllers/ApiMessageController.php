@@ -9,8 +9,8 @@
 	use App\MobileUser;
 	use App\Conversation;
 	use App\Events\ChatEvent;
-use JetBrains\PhpStorm\ArrayShape;
-use JetBrains\PhpStorm\Pure;
+    use JetBrains\PhpStorm\ArrayShape;
+    use JetBrains\PhpStorm\Pure;
 
     class ApiMessageController extends Controller
 	{
